@@ -33,8 +33,10 @@
             <div class="nav-right-most">
 
                 <a href="#" class="wish-list"><i class="fa-regular fa-heart"></i></a>
-                <a href="#" class="shopping-cart"><i class="fa-solid fa-cart-shopping"></i><span
-                        id="cart-count">0</span></a>
+                <!-- Shopping Cart Icon/Button -->
+
+                <button class="shopping-cart"><i class="fa-solid fa-cart-shopping"></i><span id="cart-count">0</span>
+                </button>
                 <a href="#" class="user"><i class="fa-solid fa-user"></i></a>
             </div>
 
@@ -43,19 +45,36 @@
 
     <div class="container">
         <div id="product-list" class="product-list">
-            <div id="product-modal" class="product-modal hidden">
-                <div class="modal-content">
-                    <span class="close-modal">&times;</span>
-                    <h3 id="modal-brand-name">Brand Name</h3>
-                    <h3 id="modal-product-name">Product Name</h3>
-                    <img id="modal-image" src="" alt="Product Image">
-                    <p id="modal-price">Price</p>
-                    <p id="modal-description">Description about the product...</p>
-                    <button id="add-to-cart-modal">Add to Cart</button>
+            <div class="product-card">
+                <img src="./src/images/sample-product-image.jpg" class="product-image" alt="product-image">
+                <h3 class="brand-name">ZEBRONICS</h3>
+                <h3 class="product-name">Banana Perfume</h3>
+                <p class="price"><span>₹</span>1599</p>
+                <button class="add-to-cart">Add to cart</button>
+            </div>
+        </div>
+        <div id="product-modal" class="product-modal hidden">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <div class="modal-body">
+                    <img id="modal-image" src="" alt="Product Image" class="modal-image">
+                    <div class="modal-details">
+                        <h3 id="modal-product-name">Product Name</h3>
+                        <p id="modal-brand-name" class="brand-name">Brand Name</p>
+                        <p id="modal-price" class="price">Price</p>
+                        <p id="modal-description">Description about the product...</p>
+                        <div class="quantity-selector">
+                            <button id="decrease-quantity">-</button>
+                            <input type="number" id="quantity-input" value="1" min="1">
+                            <button id="increase-quantity">+</button>
+                        </div>
+                        <button id="add-to-cart-modal" class="add-to-cart">Add to Cart</button>
+                    </div>
                 </div>
             </div>
-            
         </div>
+
+
     </div>
 
     <script type="module" src="./src/index.js"></script>
